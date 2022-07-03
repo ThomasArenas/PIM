@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "341516493791",
+    "firebase_url": "https://parti-cours-7cc4c-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "parti-cours-7cc4c",
+    "storage_bucket": "parti-cours-7cc4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341516493791:android:240eeeacda6791a1d99a6a",
+        "android_client_info": {
+          "package_name": "pim.estiam.particours"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341516493791-c0aartk3qpe8mqo42d5rllhoajj615oq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz3wLUtcWbbROkopOilJrqMKocSjLVW90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341516493791-c0aartk3qpe8mqo42d5rllhoajj615oq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

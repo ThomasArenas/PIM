@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Parti\'Cours</string>
+
+    <!-- Page d'incription -->
+    <string name="inscription_page_first_name">Prénom</string>
+    <string name="inscription_page_last_name">Nom</string>
+    <string name="inscription_page_email">Email</string>
+    <string name="inscription_page_password">Mot de passe</string>
+    <string name="inscription_page_confirm_password">Confirmer le mot de passe</string>
+    <string name="inscription_page_submit_button">Inscription</string>
+    <string name="inscription_page_connexion_button">Se connecter</string>
+
+    <!-- Page de connexion -->
+    <string name="connexion_page_email">Email</string>
+    <string name="connexion_page_password">Mot de passe</string>
+    <string name="connexion_page_submit_button">Connexion</string>
+    <string name="connexion_page_inscription_button">S\'inscrire</string>
+
+    <!-- Canal de discussion -->
+    <string name="canal_item_name">Nom de la matière</string>
+    <string name="canal_item_state">Etat du canal</string>
+
+    <!-- Pop-Up de nouveau canal -->
+    <string name="popup_title">Spécifiez le nom de la matière</string>
+    <string-array name="popup_matiere">
+        <item>Matière 1</item>
+        <item>Matière 2</item>
+        <item>Matière 3</item>
+    </string-array>
+    <string name="popup_submit_button">Valider</string>
+</resources>
