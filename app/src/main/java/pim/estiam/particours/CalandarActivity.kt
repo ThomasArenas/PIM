@@ -1,45 +1,31 @@
 package pim.estiam.particours
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
+import android.provider.CalendarContract
+import android.provider.CalendarContract.Events.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
-import pim.estiam.particours.databinding.ActivityCalandarBinding
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import androidx.appcompat.widget.AppCompatButton
 
-class CalandarActivity(
-    private var monthYearText: TextView,
-    private var calandarRecyclerView: RecyclerView,
-    private var selectedDate: LocalDate
-) : AppCompatActivity() {
+
+class CalandarActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initWidgets();
-        selectedDate = LocalDate.now();
-        setMonthView();
-    }
-    fun initWidgets()
-    {
-        monthYearText.setText(monthYearFromDate(selectedDate));
+        val setEvent = findViewById<AppCompatButton>(R.id.set_event)
+        setEvent.setOnClickListener{
+            val intent = Intent(Intent.ACTION_INSERT)
+                .setData(CONTENT_URI)
+                .putExtra(TITLE, "My Event")
+                .putExtra(EVENT_LOCATION, "Here")
+                .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, System.currentTimeMillis() )
+                .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, System.currentTimeMillis() + (60*60*1000))
+
+            startActivity(intent)
+        }
 
     }
 
-    private fun monthYearFromDate(LocalDate: date) : String {
-        val  formatter : DateTimeFormatter = DateTimeFormatter.ofPattern("MMMM yyyy");
-        return date.format(formatter);
-    }
 
-    fun setMonthView()
-    {
-        calandarRecyclerView = findViewById(R.id.calandarRecyclerView);
-        monthYearText = findViewById(R.id.monthYearTV);
-
-    }
-
-    fun previousMonthAction(view: View) {}
-    fun nextMonthAction(view: View) {}
 }
